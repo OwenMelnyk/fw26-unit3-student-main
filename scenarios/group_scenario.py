@@ -13,7 +13,7 @@ from typing import Dict, List, Tuple
 import numpy as np
 from core.telemetry_bus import AGENTS, ROLES, AgentTelemetry, get_baseline_state
 
-SCENARIO_NAME = "Track X: <Replace with Your Assigned Track Name>"
+SCENARIO_NAME = "Track 1: Critical Energy Evacuation & Handoff"
 CRITICAL_BATTERY_THRESHOLD = 20.0
 RSSI_PARTITION_THRESHOLD = -85.0
 
@@ -32,6 +32,7 @@ def inject_scenario_event() -> Tuple[Dict[str, AgentTelemetry], int]:
 
     # TODO (Group Implementation):
     # Modify `telemetry` or `pending_jobs` for your group's assigned track.
+    telemetry["robot-a0"].battery = 12.0
 
     return telemetry, pending_jobs
 
